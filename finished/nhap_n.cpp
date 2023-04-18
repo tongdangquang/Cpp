@@ -3,9 +3,9 @@
 #include <math.h>
 using namespace std;
 
-int main ()
+// hàm nhập giá trị từ bàn phím
+void nhap(int &n)
 {
-    int n;
     do
     {
         cout << "nhap n = ";
@@ -20,4 +20,26 @@ int main ()
         }
     } while (n < 0);
     cout << "thank you" << endl;
+}
+
+// hàm tính mũ bằng vòng lặp for
+void tinhmu(int x, int n)
+{
+    cout << "nhap x = "; cin >> x;
+    cout << "nhap n = "; cin >> n;
+    int a = 1;
+    for (int i = 0; i < n; i++)
+    {
+        a = a * x;
+    }
+    cout << "gia tri cua x mu n: pow(x, n) = " << a << endl;
+}
+
+// hàm đệ quy tính k!
+int giaithua (int k)
+{
+    if (k == 0 || k == 1)
+        return 1;
+    else 
+        return k * giaithua(k - 1);
 }
