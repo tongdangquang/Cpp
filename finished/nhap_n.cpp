@@ -43,3 +43,20 @@ int giaithua (int k)
     else 
         return k * giaithua(k - 1);
 }
+
+// chương trình tách 1 số tự nhiên ra thành các sô tự nhiên hợp thành nó
+int main()
+{
+    int num;
+    cout << "Nhap mot so nguyen: ";
+    cin >> num;
+
+    // Tach cac chu so va in ra
+    int a;
+    cout << "Cac chu so cua so " << num << " la: ";
+    while (num != 0) {
+        a = num % 10;
+        cout << a << " ";
+        num /= 10;
+    }
+}

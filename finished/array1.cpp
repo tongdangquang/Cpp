@@ -35,7 +35,16 @@ int main ()
       cout << pt << " ";
    }
 }
- 
+// nhap mảng từ bàn phím
+void nhap(int m[], int &n)
+{
+	cout << "nhap so phan tu cua mang: "; cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cout << "nhap m[" << i << "] = ";
+		cin >> m[i];
+	}
+}
 
 // 6. browse array with location index - duyệt mảng theo vị trí index
 void browse_array (int m[], int n) // n = size(m), browse_array: duyệt mảng
